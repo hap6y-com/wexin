@@ -1,0 +1,36 @@
+<!--pages/Publisha/Publisha.wxml-->
+<view class="page">
+  <input class="input1" bindinput="getContent" placeholder="请输入标题" value="{{content}}"></input>
+  <textarea class="desc" placeholder="请输入内容" bindinput="getInput"  maxlength="-1"/>
+  <!-- <view class="iamgeRootAll">
+    <view class="imgRoot" wx:for="{{imgList}}" wx:key="{{index}}" bindtap="ViewImage" data-url="{{imgList[index]}}">
+      <view wx:if="{{imgList.length==(index+1)&& imgList.length<9}}" class="imgItem" bindtap="ChooseImage">
+       <image class="photo" src="../../images/icon/photo.png"></image>
+      </view>
+      <view wx:else class="imgItem" data-index="{{index}}">
+        <image class="img" src='{{item}}' mode='aspectFill'></image>
+        <image class="closeImg" bindtap="DeleteImg" src="../../images/icon/close.png" data-index="{{index}}"></image>
+      </view>
+    </view>
+  </view> -->
+  <!-- 一开始用来占位 -->
+  <!-- <view wx:if="{{imgList.length==0}}" class="imgItem" bindtap="ChooseImage">
+      <image class="photo" src="../../images/icon/photo.png"></image>
+    </view>
+  </view> -->
+  <view class="iamgeRootAll">
+  <block  wx:for="{{imgList}}" wx:key="{{index}}">
+  <view  class="imgItem" data-index="{{index}}">
+        <image class="img" src='{{item}}' mode='aspectFill'></image>
+        <image class="closeImg" bindtap="DeleteImg" src="../../images/icon/close.png" data-index="{{index}}"></image>
+      </view>
+  </block>
+  <!-- 选择图片按钮 -->
+    <view wx:if="{{imgList.length<9}}" class="imgItem" bindtap="ChooseImage">
+      <image class="photo" src="../../images/icon/photo.png"></image>
+    </view>
+
+  </view>
+</view>
+
+  <button bindtap="publish">发布</button>

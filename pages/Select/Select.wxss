@@ -1,0 +1,9 @@
+/* pages/Select/Select.wxss */
+button{
+  margin-right:5px;
+  margin-left:5px;
+  margin-top: 20rpx;
+  color: #fff;
+  background-color: #48bcb9;
+  
+}

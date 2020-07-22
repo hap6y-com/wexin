@@ -1,0 +1,23 @@
+<!--登录面板-->
+<view class="myLogin">
+   <image class="avatar" src='{{userInfo.avatarUrl}}'></image>
+   <view class="nickname">{{userInfo.nickName}}</view>
+</view>
+<!-- 我的收藏 -->
+<text id="collection">{{userInfo.nickName}} · 发表的文章</text>
+<!-- <text id="collection">发表的文章</text> -->
+<block wx:for="{{datalist}}" wx:key="index" >
+  <view id="item-list">
+    <view class="itemRoot" bindtap="goDetail" data-item="{{item}}"  >
+      <scroll-view scroll-x >
+        <block wx:for="{{item.fileID}}" wx:key="item2" wx:for-item="item2">
+        <image class="List-Img" src='{{item2}}' data-img='{{[item2,item.fileID]}}' mode='aspectFill' bindtap="previewImg"></image>
+       </block>
+      </scroll-view>
+      <view class="item-title">
+      <text id="title"></text>{{item.title}}
+        <view id="item-text">作者：{{item.author}} /{{item.date}}</view>
+      </view> 
+    </view>
+  </view>
+</block> 

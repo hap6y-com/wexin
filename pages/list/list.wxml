@@ -1,0 +1,81 @@
+<!--pages/list/list.wxml-->
+<!--搜索框  -->
+<view class="weui-search-bar">
+  <view class="weui-search-bar__form">
+    <!--点击之后，出现input框  -->
+    <view class="weui-search-bar__box">
+      <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+      <input type="text" class="weui-search-bar__input" placeholder="请输入搜索" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
+      <!--输入款字数大于0，则显示清除按钮  -->
+      <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+        <icon type="clear" size="14"></icon>
+      </view>
+    </view>
+    <!--没点击之前，只是一些文字和图标  -->
+    <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+      <icon class="weui-icon-search" type="search" size="14"></icon>
+      <view class="weui-search-bar__text">搜索</view>
+    </label>
+  </view>
+  <!--动态出现的“取消”键  -->
+  <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+</view>
+
+  <swiper catchtap='carouselToDetail' indicator-dots indicator-color='yellowgreen' indicator-active-color='#f161b1' autoplay 
+  nterval="1000"
+  circular>
+    <swiper-item>
+      <image data-id='b5ad2e925ea5ab9f003f5d5d0f55f2baf5' src='cloud://yunkaifa1-y9yel.7975-yunkaifa1-y9yel-1301962851/03.jpg'></image>
+    </swiper-item>
+    <swiper-item>
+      <image  data-id='b5ad2e925ea5ab9f003f5d5d0f55f2baf10' src='cloud://yunkaifa1-y9yel.7975-yunkaifa1-y9yel-1301962851/meishi/sichuan.jpg'></image>
+    </swiper-item>
+    <swiper-item>
+      <image   data-id='b5ad2e925ea5ab9f003f5d5d0f55f2baf30' src='cloud://yunkaifa1-y9yel.7975-yunkaifa1-y9yel-1301962851/meishi/hubei.jpg'></image>
+    </swiper-item>
+    <swiper-item>
+      <image   data-id='b5ad2e925ea5ab9f003f5d5d0f55f2baf6' src='cloud://yunkaifa1-y9yel.7975-yunkaifa1-y9yel-1301962851/guangzhou1.jpg'></image>
+    </swiper-item>
+  </swiper>
+
+
+<!-- 分类导航 -->
+<view class="navs">
+  <view class="nav-item">
+    <image catchtap="goDelicious" src='/images/icon/meishi.png'></image>
+    <text>爱 · 美食</text>
+  </view> 
+  <view class="nav-item">
+    <image catchtap="goScenery" src='/images/icon/meijing.png'></image>
+    <text>看 · 美景</text>
+  </view> 
+  <view class="nav-item">
+    <image catchtap="goSelect" src='/images/icon/fabiao.png'></image>
+    <text>趣 · 分享</text>
+  </view> 
+  <view class="nav-item">
+    <image catchtap="goPersonal" src='/images/icon/shoucangjia.png'></image>
+    <text>读 · 收藏</text>
+  </view> 
+</view>
+<block wx:for="{{datalist}}" wx:key="index">
+  <view class="itemRoot" >
+    <view class='avatar_date'>
+      <image src='{{item.avatar}}'></image>
+      <text>{{item.date}}</text>
+    </view> 
+    <view class="Company" bindtap="goDetail" data-item="{{item}}">{{item.title}}</view> 
+      <block wx:for="{{item.fileID}}" wx:key="item2" wx:for-item="item2">
+       <image class="List-Img" src='{{item2}}' data-img='{{[item2,item.fileID]}}' mode='aspectFill' bindtap="previewImg"></image>
+      </block>
+    <!-- </scroll-view> -->
+    <text class="Content" bindtap="goDetail" data-item="{{item}}">{{item.desc}}</text>
+    <view class='collection_love'>
+      <image src='/images/icon/shoucang-yes.png'></image>
+      <text>{{item.love_count}}</text>
+      <image src='/images/icon/dianzan-yes.png'></image>
+      <text>{{item.attention_count}}</text>
+    </view>
+  </view>
+
+</block> 

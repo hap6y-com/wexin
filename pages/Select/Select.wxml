@@ -1,0 +1,3 @@
+<!--pages/Select/Select.wxml-->
+<button bindtap="goPublisha" >发布与美景相关</button>
+<button bindtap="goPublishb" >发布与美食相关</button>

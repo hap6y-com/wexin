@@ -1,0 +1,54 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/list/list",
+    "pages/detail/detail",
+    "pages/Personal/Personal",
+    "pages/shoucang/shoucang",
+    
+    "pages/Delicious/Delicious",
+
+    "pages/Scenery/Scenery",
+    "pages/Deldetail/Deldetail",
+    "pages/Select/Select",
+    "pages/Publisha/Publisha",
+    "pages/Publishb/Publishb"
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#48bcb9",
+    "navigationBarTitleText": "欢迎使用旅游共享",
+    "enablePullDownRefresh": true,
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/list/list",
+        "text": "趣味旅游",
+        "iconPath": "/images/tab/home.png",
+        "selectedIconPath": "/images/tab/home_hl.png"
+      },
+      {
+        "pagePath": "pages/Personal/Personal",
+        "text": "我的",
+        "iconPath": "/images/tab/profile.png",
+        "selectedIconPath": "/images/tab/profile_hl.png"
+      }
+    ]
+  },
+
+  "sitemapLocation": "sitemap.json",
+  "plugins": {
+    "routePlan": {
+      "version": "1.0.5",
+      "provider": "wx50b5593e81dd937a"
+    }
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "获取你的位置"
+    }
+  }
+}

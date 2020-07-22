@@ -1,0 +1,85 @@
+/* pages/Deldetail/Deldetail.wxss */
+.DeldetailContainer{
+  display: flex;
+  flex-direction: column;
+  padding: 10rpx;
+}
+.headImg{
+  height: 460rpx;
+  width: 100%;
+  
+}
+
+.avatar_date{
+  padding-bottom: 10rpx;
+  text-align: center;
+}
+.avatar_date image{
+  width: 40rpx;
+  height: 40rpx; 
+  vertical-align: middle; 
+  /* margin-right: 1rpx; */
+}
+.avatar_date text{
+  font-size:28rpx; 
+  margin-left: 5rpx;
+}
+
+.Company{
+  margin: 10rpx;
+  font-size: 42rpx;
+  font-weight: 700;
+  line-height: 80rpx;
+  text-align: center;
+}
+.Content{
+  font-size: 32rpx;
+  text-indent: 32rpx;
+  margin-top: 20rpx;
+  margin-left: 10rpx;
+  
+}
+.collection_share_container{
+  padding-top: 30rpx;
+ position: relative; 
+ border-bottom: 1px solid gainsboro;
+}
+
+.collection_share{
+  /* position: relative;  */
+  float: right;
+  margin-right: 50rpx;
+}
+
+/* 图标 */
+.collection_share image{
+  width: 50rpx;
+  height: 50rpx;
+}
+
+
+/* 评论区域头部 */
+.pinglunTip{
+  margin-top: 30rpx;
+  font-size: 40rpx;
+  color: goldenrod
+}
+/* 评论内容 */
+.pinglunItem{
+  border-bottom: 1px solid gainsboro;
+  margin-left: 40rpx;
+  margin-top: 32rpx;
+}
+/* 评论输入框 */
+.input{
+  border: 1rpx solid gainsboro;
+  margin-top: 150rpx;
+}
+button{
+  width: 250rpx;
+  height: 100rpx;
+  margin: 20rpx auto;
+
+}
+
+

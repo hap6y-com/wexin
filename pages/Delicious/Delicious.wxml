@@ -1,0 +1,56 @@
+<!--pages/Delicious/Delicious.wxml-->
+<!--搜索框  -->
+<view class="weui-search-bar">
+  <view class="weui-search-bar__form">
+    <!--点击之后，出现input框  -->
+    <view class="weui-search-bar__box">
+      <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+      <input type="text" class="weui-search-bar__input" placeholder="请输入搜索" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
+      <!--输入款字数大于0，则显示清除按钮  -->
+      <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+        <icon type="clear" size="14"></icon>
+      </view>
+    </view>
+    <!--没点击之前，只是一些文字和图标  -->
+    <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+      <icon class="weui-icon-search" type="search" size="14"></icon>
+      <view class="weui-search-bar__text">搜索</view>
+    </label>
+  </view>
+  <!--动态出现的“取消”键  -->
+  <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+</view>
+<view class="tuijian"> 
+  
+  <view id="xiaolongxia">
+    <text class="Company">今日美食推荐：</text>
+    <view id="longxia">——冰镇小龙虾——</view>
+  <text id="text">每年的夏季、秋季都是小龙虾上市的时节，小龙虾的做法有很多，但冰镇小龙虾乃是夏日专属，在炎炎的夏日，来上一份冰镇小龙虾，剥壳去皮，清爽的虾肉里面泛着多种卤汁味，有着刺身凉爽，还有着各式香料的卤味，让我们在消暑的同时也能大快朵颐。</text>
+<image src="cloud://yunkaifa1-y9yel.7975-yunkaifa1-y9yel-1301962851/meishi/xiaolongxia.jpeg"></image>
+  </view>
+</view>
+<view class="long">————全国特色美食栏目————</view>
+<block wx:for="{{datalistObj}}" wx:key="index">
+  <view class="itemRoot" >
+    <view class='avatar_date'>
+      <image src='{{item.avatar}}'></image>
+      <text>{{item.date}}</text>
+    </view> 
+    <text class="Company" bindtap="goDeldetail" data-item="{{item}}">{{item.title}}</text>
+    <!-- <image class="List-Img" src="{{item.fileID}}"></image> -->
+     <scroll-view class='scroll-box' scroll-x croll-with-animation style="width: 100%;height:430rpx" >
+      <block wx:for="{{item.fileID}}" wx:key="item2" wx:for-item="item2">
+        <image class="List-Img" src='{{item2}}' data-img='{{[item2,item.fileID]}}' mode='aspectFill' bindtap="previewImg"></image>
+      </block>
+    </scroll-view>
+
+    <text class="Content"  bindtap="goDeldetail" data-item="{{item}}">{{item.desc}}</text>
+    <view class='collection_love'>
+      <image src='/images/icon/shoucang-yes.png'></image>
+      <text>{{item.love_count}}</text>
+      <image src='/images/icon/dianzan-yes.png'></image>
+      <text>{{item.attention_count}}</text>
+    </view>
+  </view>
+
+</block> 

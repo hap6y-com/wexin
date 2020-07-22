@@ -1,0 +1,62 @@
+/* pages/Publisha/Publisha.wxss */
+.page{
+padding: 10px;
+
+}
+
+/* 标题输入框 */
+.title{
+  padding: 5px;
+  /* margin-top: 150rpx; */
+}
+ /* 内容输入 */
+.desc{
+  width: 100%;
+  margin-bottom: 40px;
+  /* font-size: 36rpx; */
+  padding: 5px;
+  border-top: 1rpx solid gainsboro;
+  border-bottom: 1rpx solid gainsboro;
+}
+ /* 图片大框 */
+.iamgeRootAll{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px
+}
+/* 每个图片大小 */
+.imgItem{
+  width:31%;
+  height: 100px;
+  padding: 9rpx;
+}
+/* 上传图片大小 */
+ .img{
+  width: 105px;
+  height: 98px;
+  /* position: relative; */
+  /* display: block; */
+}
+/* 取消图标大小 */
+.closeImg{
+  width: 18px;
+  height: 18px;
+  position: absolute;  
+  /* border-bottom: -100rpx; */
+}
+/* 添加按钮大小 */
+.photo{
+  width: 98px;
+  height: 98px;
+}
+ 
+
+
+button{
+  margin-right:5px;
+  margin-left:5px;
+  margin-top: 20rpx;
+  color: #fff;
+  background-color: #48bcb9;
+}

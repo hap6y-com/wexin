@@ -1,0 +1,120 @@
+{
+	"description": "项目配置文件。",
+	"cloudfunctionRoot": "cloud/",
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"autoAudits": false,
+		"showShadowRootInWxmlPanel": true,
+		"scopeDataCheck": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.11.0",
+	"appid": "wxe464ff253d677e75",
+	"projectname": "tourism",
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"cloudfunctionTemplateRoot": "cloudfunctionTemplate",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "pages/Personal/Personal",
+					"pathName": "pages/Personal/Personal",
+					"query": "id=b5ad2e925ea5ab9f003f5d5d0f55f2baf5",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/index",
+					"pathName": "pages/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 4,
+					"name": "pages/list/list",
+					"pathName": "pages/list/list",
+					"query": "b5ad2e925ea5ab9f003f5d5d0f55f2baf7",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/detail/detail",
+					"pathName": "pages/detail/detail",
+					"query": "id=b5ad2e925ea5ab9f003f5d5d0f55f2baf5",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shoucang/shoucang",
+					"pathName": "pages/shoucang/shoucang",
+					"query": "id=b5ad2e925ea5ab9f003f5d5d0f55f2baf5",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/Delicious/Delicious",
+					"pathName": "pages/Delicious/Delicious",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/Scenery/Scenery",
+					"pathName": "pages/Scenery/Scenery",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/Deliciou/Deliciou",
+					"pathName": "pages/Deliciou/Deliciou",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/Deldetail/Deldetail",
+					"pathName": "pages/Deldetail/Deldetail",
+					"query": "id=b5ad2e925ea5ab9f003f5d5d0f55f2baf5",
+					"scene": null
+				}
+			]
+		}
+	}
+}
