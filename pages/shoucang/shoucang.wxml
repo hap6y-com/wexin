@@ -13,7 +13,13 @@
         <image class="List-Img" src='{{item2}}' data-img='{{[item2,item.fileID]}}' mode='aspectFill' bindtap="previewImg"></image>
       </block>
     </scroll-view>
-    
+
+
+
+
+
+
+
     </view>
   </view>
 </block> 
